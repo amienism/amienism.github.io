@@ -69,8 +69,7 @@
         <div class="projects-text">
             <h3 class="text-center">My Projects</h3>
         </div>
-        <div class="project-content">
-
+        <div class="project-content" v-if="current == 1">
             <div class="row q-gutter-md q-mt-md projects-wrapper">
                 <div class="col">
                     <q-card class="card">
@@ -159,8 +158,45 @@
             </div>
             
         </div>
+        <div class="project-content" v-if="current == 2">
+            <div class="row q-gutter-md q-mt-sm projects-wrapper">
+                <div class="col ">
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_3" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project5_1.jpg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="second" img-src="@/assets/images/project5_2.jpg">
+
+                            </q-carousel-slide>
+                            <q-carousel-slide name="third" img-src="@/assets/images/project5_3.jpg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="fourth" img-src="@/assets/images/project5_4.jpg">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">MENTOR (Monitoring Evaluasi Training Hours)</div>
+                            <div class="text-subtitle2">Aplikasi monitoring dan manajemen training perusahaan. (Vue JS + Quasar + NodeJS)</div>
+                        </q-card-section>
+                    </q-card>
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+            
+        </div>
         <div class="q-mt-xl">
-            <h4 class="text-center">Will be updated soon ...</h4>
+            <div class="row justify-center">
+                <q-pagination
+                    color="white"
+                    active-text-color="black"
+                    v-model="current"
+                    max="2"
+                    direction-links
+                    gutter="sm"
+                />
+            </div>
         </div>
     </div>
 
@@ -211,6 +247,7 @@
                 ? '16/9'
                 : '4/3'
             })
+            const current = ref(1);
 
 
             return {
@@ -220,6 +257,7 @@
                 slide_4: ref('first'),
                 autoplay: ref(true),
                 imgRatio,
+                current
             }
         }
     }
