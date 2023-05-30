@@ -180,6 +180,26 @@
                         </q-card-section>
                     </q-card>
                 </div>
+                <div class="col ">
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_4" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project6_1.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="second" img-src="@/assets/images/project6_2.jpeg">
+
+                            </q-carousel-slide>
+                            <q-carousel-slide name="third" img-src="@/assets/images/project6_3.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="fourth" img-src="@/assets/images/project6_4.jpeg">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">BESTI (Database Tenaga Ahli & Proposal Teknis)</div>
+                            <div class="text-subtitle2">Aplikasi untuk manajemen data tenaga ahli dan proposal teknis. (Vue JS + Quasar + NodeJS (Express))</div>
+                        </q-card-section>
+                    </q-card>
+                </div>
                 <div class="col">
                     
                 </div>
