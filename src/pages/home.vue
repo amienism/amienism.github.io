@@ -156,13 +156,12 @@
                     </q-card>
                 </div>
             </div>
-            
         </div>
         <div class="project-content" v-if="current == 2">
             <div class="row q-gutter-md q-mt-sm projects-wrapper">
                 <div class="col ">
                     <q-card class="card">
-                        <q-carousel arrows animated v-model="slide_3" height="300px" control-color="black" >
+                        <q-carousel arrows animated v-model="slide_1" height="300px" control-color="black" >
                             <q-carousel-slide name="first" img-src="@/assets/images/project5_1.jpg">
                             </q-carousel-slide>
                             <q-carousel-slide name="second" img-src="@/assets/images/project5_2.jpg">
@@ -182,7 +181,7 @@
                 </div>
                 <div class="col ">
                     <q-card class="card">
-                        <q-carousel arrows animated v-model="slide_4" height="300px" control-color="black" >
+                        <q-carousel arrows animated v-model="slide_2" height="300px" control-color="black" >
                             <q-carousel-slide name="first" img-src="@/assets/images/project6_1.jpeg">
                             </q-carousel-slide>
                             <q-carousel-slide name="second" img-src="@/assets/images/project6_2.jpeg">
@@ -200,8 +199,45 @@
                         </q-card-section>
                     </q-card>
                 </div>
-                <div class="col">
-                    
+            </div>
+            <div class="row q-gutter-md q-mt-sm projects-wrapper">
+                <div class="col ">
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_3" height="300px" control-color="black" >
+                            <q-carousel-slide name="fourth" img-src="@/assets/images/project7_4.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="third" img-src="@/assets/images/project7_3.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="first" img-src="@/assets/images/project7_1.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="second" img-src="@/assets/images/project7_2.jpeg">
+
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">SIKAP V2 (Sistem Informasi Keuangan Anggaran Proyke)</div>
+                            <div class="text-subtitle2">Sistem untuk operasional keuangan proyek perusahaan. (Vue JS + Vuetify + Express)</div>
+                        </q-card-section>
+                    </q-card>
+                </div>
+                <div class="col ">
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_4" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project8_1.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="second" img-src="@/assets/images/project8_2.jpeg">
+
+                            </q-carousel-slide>
+                            <q-carousel-slide name="third" img-src="@/assets/images/project8_3.jpeg">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">Clinic Management</div>
+                            <div class="text-subtitle2">Aplikasi untuk manajemen operasional klinik perusahaan.</div>
+                        </q-card-section>
+                    </q-card>
                 </div>
             </div>
             
