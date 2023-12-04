@@ -242,13 +242,47 @@
             </div>
             
         </div>
+        <div class="project-content" v-if="current == 3">
+            <div class="row q-gutter-md q-mt-sm projects-wrapper">
+                <div class="col ">
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_1" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project9_3.jpeg">
+                            </q-carousel-slide>
+                            <q-carousel-slide name="second" img-src="@/assets/images/project9_2.jpeg">
+
+                            </q-carousel-slide>
+                            <q-carousel-slide name="third" img-src="@/assets/images/project9_1.jpeg">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">Hiring Portal</div>
+                            <div class="text-subtitle2">Aplikasi rekrutment karyawan dan portal lowongan pekerjaan. (Vue JS + Quasar + Laravel)</div>
+                        </q-card-section>
+                    </q-card>
+                </div>
+                <div class="col ">
+                    
+                </div>
+            </div>
+            <div class="row q-gutter-md q-mt-sm projects-wrapper">
+                <div class="col ">
+                    
+                </div>
+                <div class="col ">
+                    
+                </div>
+            </div>
+            
+        </div>
         <div class="q-mt-xl">
             <div class="row justify-center">
                 <q-pagination
                     color="white"
                     active-text-color="black"
                     v-model="current"
-                    max="2"
+                    max="3"
                     direction-links
                     gutter="sm"
                 />
