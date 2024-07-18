@@ -42,7 +42,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <h5><b>Skills</b></h5>
+                <h5 style="margin-bottom: 1rem"><b>Skills</b></h5>
                 <div class="skills-img-wrapper">
                     <img src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="html logo">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
@@ -59,6 +59,10 @@
                     <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" alt="mysql logo">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
                         alt="postgres logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
+                        alt="PHP logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png"
+                        alt="Laravel logo">
                 </div>
             </div>
         </div>
@@ -263,15 +267,45 @@
                     </q-card>
                 </div>
                 <div class="col ">
-                    
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_2" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project10_1.png">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">Company Profile</div>
+                            <div class="text-subtitle2">Aplikasi Company Profile. (Laravel)</div>
+                        </q-card-section>
+                    </q-card>
                 </div>
             </div>
             <div class="row q-gutter-md q-mt-sm projects-wrapper">
                 <div class="col ">
-                    
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_3" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project11_1.png">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">Haji Jabar</div>
+                            <div class="text-subtitle2">Aplikasi Haji Jabar (Vue Js)</div>
+                        </q-card-section>
+                    </q-card>
                 </div>
                 <div class="col ">
-                    
+                    <q-card class="card">
+                        <q-carousel arrows animated v-model="slide_3" height="300px" control-color="black" >
+                            <q-carousel-slide name="first" img-src="@/assets/images/project12_1.png">
+                            </q-carousel-slide>
+                        </q-carousel>
+
+                        <q-card-section>
+                            <div class="text-h6">Aplikasi Ticket</div>
+                            <div class="text-subtitle2">Aplikasi Ticket (Laravel + Vue JS)</div>
+                        </q-card-section>
+                    </q-card>
                 </div>
             </div>
             
@@ -325,7 +359,8 @@
 
 <script>
     import {
-        ref, computed
+        ref, computed,
+        watch
     } from 'vue'
     import { useQuasar } from 'quasar';
 
@@ -339,12 +374,27 @@
             })
             const current = ref(1);
 
+            const slide_1 = ref('first');
+            const slide_2 = ref('first');
+            const slide_3 = ref('first');
+            const slide_4 = ref('first');
+
+            watch(
+                () => current.value,
+                () => {
+                    slide_1.value = 'first';
+                    slide_2.value = 'first';
+                    slide_3.value = 'first';
+                    slide_4.value = 'first';
+                }
+            )
+
 
             return {
-                slide_1: ref('first'),
-                slide_2: ref('first'),
-                slide_3: ref('first'),
-                slide_4: ref('first'),
+                slide_1,
+                slide_2,
+                slide_3,
+                slide_4,
                 autoplay: ref(true),
                 imgRatio,
                 current
